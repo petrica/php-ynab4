@@ -1,0 +1,20 @@
+{
+  "name": "petrica/php-ynab4",
+  "description": "API to read and write transactions to a YNAB4 json database.",
+  "keywords": ["api", "ynab4", "transactions", "budget"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Petrica Martinescu",
+      "email": "petrica@martinescu.com"
+    }
+  ],
+  "autoload": {
+    "psr-4" : {
+      "Petrica\\Ynab\\" : ""
+    },
+    "exclude-from-classmap": [
+      "/Tests/"
+    ]
+  }
+}
