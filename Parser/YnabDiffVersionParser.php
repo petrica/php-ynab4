@@ -1,13 +1,13 @@
 <?php
 
-namespace MTools\Ynab\Parser;
+namespace Petrica\Ynab\Parser;
 
-use MTools\Ynab\Entity\YnabDiffVersion;
+use Petrica\Ynab\Entity\YnabDiffVersion;
 
 /**
  * Class YnabDiffVersionParser
  *
- * @package MTools\Ynab\Parse
+ * @package Petrica\Ynab\Parse
  */
 class YnabDiffVersionParser extends YnabBaseVersionParser
     implements YnabParserInterface

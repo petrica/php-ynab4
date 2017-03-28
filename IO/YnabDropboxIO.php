@@ -1,14 +1,14 @@
 <?php
 
-namespace MTools\Ynab\IO;
+namespace Petrica\Ynab\IO;
 
 use Dropbox\Client;
 use Dropbox\WriteMode;
-use MTools\Ynab\Entity\YnabFile;
+use Petrica\Ynab\Entity\YnabFile;
 
 /**
  * Class YnabDropboxIO
- * @package MTools\Ynab\Entity
+ * @package Petrica\Ynab\Entity
  */
 class YnabDropboxIO implements YnabIOInterface
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace MTools\Ynab;
+namespace Petrica\Ynab;
 
 use CRUDlex\Entity;
 use Dropbox\Client;
 use Dropbox\WriteMode;
-use MTools\Ynab\Diff\YnabDiff;
-use MTools\Ynab\Entity\YnabTransaction;
-use MTools\Ynab\Version\YnabVersion;
+use Petrica\Ynab\Diff\YnabDiff;
+use Petrica\Ynab\Entity\YnabTransaction;
+use Petrica\Ynab\Version\YnabVersion;
 use Silex\Application;
 
 require_once 'class.uuid.php';

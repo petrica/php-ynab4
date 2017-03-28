@@ -1,8 +1,8 @@
 <?php
 
-namespace MTools\Ynab\Parser;
+namespace Petrica\Ynab\Parser;
 
-use MTools\Ynab\Entity\YnabVersion;
+use Petrica\Ynab\Entity\YnabVersion;
 
 class YnabBaseVersionParser
 {

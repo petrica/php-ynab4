@@ -1,16 +1,16 @@
 <?php
 
-namespace MTools\Ynab\Repository;
+namespace Petrica\Ynab\Repository;
 
-use MTools\Ynab\Entity\YnabDevice;
-use MTools\Ynab\Entity\YnabEntities;
-use MTools\Ynab\IO\YnabIOInterface;
-use MTools\Ynab\Parser\YnabTransactionParser;
+use Petrica\Ynab\Entity\YnabDevice;
+use Petrica\Ynab\Entity\YnabEntities;
+use Petrica\Ynab\IO\YnabIOInterface;
+use Petrica\Ynab\Parser\YnabTransactionParser;
 
 /**
  * Class YnabBudgetFullRepository
  *
- * @package MTools\Ynab\Repository
+ * @package Petrica\Ynab\Repository
  */
 class YnabBudgetFullRepository implements YnabRepositoryInterface
 {

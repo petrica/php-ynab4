@@ -1,12 +1,12 @@
 <?php
 
-namespace MTools\Ynab\IO;
+namespace Petrica\Ynab\IO;
 
-use MTools\Ynab\Entity\YnabFile;
+use Petrica\Ynab\Entity\YnabFile;
 
 /**
  * Interface YnabIOInterface
- * @package MTools\Ynab\IO
+ * @package Petrica\Ynab\IO
  */
 interface YnabIOInterface
 {

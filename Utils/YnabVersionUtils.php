@@ -1,13 +1,13 @@
 <?php
 
-namespace MTools\Ynab\Utils;
+namespace Petrica\Ynab\Utils;
 
-use MTools\Ynab\Entity\YnabVersion;
+use Petrica\Ynab\Entity\YnabVersion;
 
 /**
  * Class YnabVersionUtils
  *
- * @package MTools\Ynab\Utils
+ * @package Petrica\Ynab\Utils
  */
 class YnabVersionUtils
 {

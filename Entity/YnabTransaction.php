@@ -1,12 +1,12 @@
 <?php
 
-namespace MTools\Ynab\Entity;
+namespace Petrica\Ynab\Entity;
 
 require_once 'class.uuid.php';
 
 /**
  * Class YnabTransaction
- * @package MTools\Ynab\Entity
+ * @package Petrica\Ynab\Entity
  */
 class YnabTransaction implements \JsonSerializable
 {

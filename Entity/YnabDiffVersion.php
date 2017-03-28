@@ -1,11 +1,11 @@
 <?php
 
-namespace MTools\Ynab\Entity;
+namespace Petrica\Ynab\Entity;
 
 /**
  * Class YnabDiffVersion
  *
- * @package MTools\Ynab\Entity
+ * @package Petrica\Ynab\Entity
  */
 class YnabDiffVersion
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace MTools\Ynab\Repository;
+namespace Petrica\Ynab\Repository;
 
 interface YnabRepositoryInterface
 {

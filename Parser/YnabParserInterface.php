@@ -1,6 +1,6 @@
 <?php
 
-namespace MTools\Ynab\Parser;
+namespace Petrica\Ynab\Parser;
 
 interface YnabParserInterface
 {

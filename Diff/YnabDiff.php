@@ -1,8 +1,8 @@
 <?php
 
-namespace MTools\Ynab\Diff;
+namespace Petrica\Ynab\Diff;
 
-use MTools\Ynab\Version\YnabVersion;
+use Petrica\Ynab\Entity\YnabVersion;
 
 class YnabDiff
 {

@@ -1,19 +1,19 @@
 <?php
 
-namespace MTools\Ynab;
+namespace Petrica\Ynab;
 
-use MTools\Ynab\Entity\YnabBudget;
-use MTools\Ynab\Entity\YnabDiff;
-use MTools\Ynab\Entity\YnabItem;
-use MTools\Ynab\Repository\YnabBudgetRepository;
-use MTools\Ynab\Entity\YnabDevice;
-use MTools\Ynab\Repository\YnabDeviceRepository;
-use MTools\Ynab\Entity\YnabTransaction;
-use MTools\Ynab\Entity\YnabVersion;
-use MTools\Ynab\IO\YnabIOInterface;
-use MTools\Ynab\Repository\YnabBudgetFullRepository;
-use MTools\Ynab\Repository\YnabDiffRepository;
-use MTools\Ynab\Utils\YnabVersionUtils;
+use Petrica\Ynab\Entity\YnabBudget;
+use Petrica\Ynab\Entity\YnabDiff;
+use Petrica\Ynab\Entity\YnabItem;
+use Petrica\Ynab\Repository\YnabBudgetRepository;
+use Petrica\Ynab\Entity\YnabDevice;
+use Petrica\Ynab\Repository\YnabDeviceRepository;
+use Petrica\Ynab\Entity\YnabTransaction;
+use Petrica\Ynab\Entity\YnabVersion;
+use Petrica\Ynab\IO\YnabIOInterface;
+use Petrica\Ynab\Repository\YnabBudgetFullRepository;
+use Petrica\Ynab\Repository\YnabDiffRepository;
+use Petrica\Ynab\Utils\YnabVersionUtils;
 
 require_once 'class.uuid.php';
 
@@ -22,7 +22,7 @@ require_once 'class.uuid.php';
  *
  * Push/Pull changes from a YNAB4 database
  *
- * @package MTools\Ynab
+ * @package Petrica\Ynab
  */
 class YnabClient
 {

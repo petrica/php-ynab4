@@ -1,18 +1,18 @@
 <?php
 
-namespace MTools\Ynab\Repository;
+namespace Petrica\Ynab\Repository;
 
-use MTools\Ynab\Entity\YnabDevice;
-use MTools\Ynab\Entity\YnabDiff;
-use MTools\Ynab\Entity\YnabEntities;
-use MTools\Ynab\Entity\YnabFile;
-use MTools\Ynab\Entity\YnabTransaction;
-use MTools\Ynab\Entity\YnabVersion;
-use MTools\Ynab\IO\YnabIOInterface;
-use MTools\Ynab\Parser\YnabDiffVersionParser;
-use MTools\Ynab\Parser\YnabTransactionParser;
-use MTools\Ynab\Parser\YnabVersionParser;
-use MTools\Ynab\Utils\YnabVersionUtils;
+use Petrica\Ynab\Entity\YnabDevice;
+use Petrica\Ynab\Entity\YnabDiff;
+use Petrica\Ynab\Entity\YnabEntities;
+use Petrica\Ynab\Entity\YnabFile;
+use Petrica\Ynab\Entity\YnabTransaction;
+use Petrica\Ynab\Entity\YnabVersion;
+use Petrica\Ynab\IO\YnabIOInterface;
+use Petrica\Ynab\Parser\YnabDiffVersionParser;
+use Petrica\Ynab\Parser\YnabTransactionParser;
+use Petrica\Ynab\Parser\YnabVersionParser;
+use Petrica\Ynab\Utils\YnabVersionUtils;
 
 class YnabDiffRepository implements YnabRepositoryInterface
 {

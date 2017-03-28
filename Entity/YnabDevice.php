@@ -1,12 +1,12 @@
 <?php
 
-namespace MTools\Ynab\Entity;
-use MTools\Ynab\Utils\YnabVersionUtils;
+namespace Petrica\Ynab\Entity;
+use Petrica\Ynab\Utils\YnabVersionUtils;
 
 /**
  * Class YnabDevice
  *
- * @package MTools\Ynab\Entity
+ * @package Petrica\Ynab\Entity
  */
 class YnabDevice implements \JsonSerializable
 {

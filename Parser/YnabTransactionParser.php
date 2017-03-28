@@ -1,8 +1,8 @@
 <?php
 
-namespace MTools\Ynab\Parser;
+namespace Petrica\Ynab\Parser;
 
-use MTools\Ynab\Entity\YnabTransaction;
+use Petrica\Ynab\Entity\YnabTransaction;
 
 class YnabTransactionParser implements YnabParserInterface
 {

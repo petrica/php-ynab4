@@ -1,6 +1,6 @@
 <?php
 
-namespace MTools\Ynab\Entity;
+namespace Petrica\Ynab\Entity;
 
 class YnabVersion
 {
