@@ -3,12 +3,17 @@
   "description": "API to read and write transactions to a YNAB4 json database.",
   "keywords": ["api", "ynab4", "transactions", "budget"],
   "license": "MIT",
+  "type" : "library",
+  "homepage": "https://github.com/petrica/php-ynab4",
   "authors": [
     {
       "name": "Petrica Martinescu",
       "email": "petrica@martinescu.com"
     }
   ],
+  "support": {
+    "issues": "https://github.com/petrica/php-ynab4/issues"
+  },
   "autoload": {
     "psr-4" : {
       "Petrica\\Ynab\\" : ""
@@ -16,5 +21,13 @@
     "exclude-from-classmap": [
       "/Tests/"
     ]
+  },
+  "include-path": ["lib"],
+  "require-dev": {
+    "phpunit/phpunit": "^6.0",
+    "mikey179/vfsStream": "^1.6"
+  },
+  "require": {
+    "dropbox/dropbox-sdk": "^1.1"
   }
 }
