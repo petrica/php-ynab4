@@ -2,11 +2,13 @@
 
 namespace Petrica\Ynab\Entity;
 
+use Petrica\Ynab\Utils\YnabVersionUtils;
+
 /**
  * Class YnabDiff
  * @package Petrica\Ynab\Entity
  */
-class YnabDiff
+class YnabDiff implements \JsonSerializable
 {
     private $startVersion;
     private $endVersion;
@@ -163,5 +165,17 @@ class YnabDiff
     public function setItems($items)
     {
         $this->items = $items;
+    }
+
+    /**
+     * @return array
+     */
+    function jsonSerialize()
+    {
+        $utils = new YnabVersionUtils();
+        $data = get_object_vars($this);
+        $data['startVersion'] = $utils->packKnowledge($this->getStartVersion());
+        $data['endVersion'] = $utils->packKnowledge($this->getEndVersion());
+        return $data;
     }
 }

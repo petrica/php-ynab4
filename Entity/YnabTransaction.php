@@ -2,6 +2,8 @@
 
 namespace Petrica\Ynab\Entity;
 
+use Petrica\Ynab\Utils\YnabVersionUtils;
+
 require_once 'class.uuid.php';
 
 /**
@@ -222,8 +224,16 @@ class YnabTransaction implements \JsonSerializable
         }
     }
 
+    /**
+     * @return array
+     */
     function jsonSerialize()
     {
-        return get_object_vars($this);
+        $utils = new YnabVersionUtils();
+        $data = get_object_vars($this);
+        $data['entityVersion'] = $utils->packKnowledge([
+            $this->getEntityVersion()
+        ]);
+        return $data;
     }
 }
