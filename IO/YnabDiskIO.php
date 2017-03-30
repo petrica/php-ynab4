@@ -1,9 +1,8 @@
 <?php
 
-namespace Petrica\Ynab;
+namespace Petrica\Ynab\IO;
 
 use Petrica\Ynab\Entity\YnabFile;
-use Petrica\Ynab\IO\YnabIOInterface;
 
 /**
  * Class YnabDiskIO
