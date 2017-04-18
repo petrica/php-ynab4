@@ -28,6 +28,8 @@ class YnabTransaction implements \JsonSerializable
     protected $memo;
     protected $isTombstone = false;
 
+    protected $dirty = [];
+
     public function __construct()
     {
         $this->setCleared(static::CLEARED_TRUE);
@@ -49,6 +51,7 @@ class YnabTransaction implements \JsonSerializable
     public function setAmount($amount)
     {
         $this->amount = $amount;
+        $this->addDirty('amount');
     }
 
     /**
@@ -65,6 +68,7 @@ class YnabTransaction implements \JsonSerializable
     public function setEntityVersion($entityVersion)
     {
         $this->entityVersion = $entityVersion;
+        $this->addDirty('entityVersion');
     }
 
     /**
@@ -81,6 +85,7 @@ class YnabTransaction implements \JsonSerializable
     public function setAccepted($accepted)
     {
         $this->accepted = $accepted;
+        $this->addDirty('accepted');
     }
 
     /**
@@ -97,6 +102,7 @@ class YnabTransaction implements \JsonSerializable
     public function setCleared($cleared)
     {
         $this->cleared = $cleared;
+        $this->addDirty('cleared');
     }
 
     /**
@@ -113,6 +119,7 @@ class YnabTransaction implements \JsonSerializable
     public function setDate($date)
     {
         $this->date = $date;
+        $this->addDirty('date');
     }
 
     /**
@@ -129,6 +136,7 @@ class YnabTransaction implements \JsonSerializable
     public function setCategoryId($categoryId)
     {
         $this->categoryId = $categoryId;
+        $this->addDirty('categoryId');
     }
 
     /**
@@ -145,6 +153,7 @@ class YnabTransaction implements \JsonSerializable
     public function setPayeeId($payeeId)
     {
         $this->payeeId = $payeeId;
+        $this->addDirty('payeeId');
     }
 
     /**
@@ -161,6 +170,7 @@ class YnabTransaction implements \JsonSerializable
     public function setEntityId($entityId)
     {
         $this->entityId = $entityId;
+        $this->addDirty('entityId');
     }
 
     /**
@@ -177,6 +187,7 @@ class YnabTransaction implements \JsonSerializable
     public function setAccountId($accountId)
     {
         $this->accountId = $accountId;
+        $this->addDirty('accountId');
     }
 
     /**
@@ -201,6 +212,7 @@ class YnabTransaction implements \JsonSerializable
     public function setMemo($memo)
     {
         $this->memo = $memo;
+        $this->addDirty('memo');
     }
 
     /**
@@ -222,6 +234,19 @@ class YnabTransaction implements \JsonSerializable
         else {
             $this->isTombstone = false;
         }
+        $this->addDirty('isTombstone');
+    }
+
+    /**
+     * Add to dirty fields array
+     *
+     * @param $field
+     */
+    protected function addDirty($field)
+    {
+        if (!in_array($field, $this->dirty)) {
+            $this->dirty[] = $field;
+        }
     }
 
     /**
@@ -234,6 +259,6 @@ class YnabTransaction implements \JsonSerializable
         $data['entityVersion'] = $utils->packKnowledge([
             $this->getEntityVersion()
         ]);
-        return $data;
+        return array_intersect_key($data, array_flip($this->dirty));
     }
 }
