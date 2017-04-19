@@ -33,6 +33,7 @@ class YnabTransaction implements \JsonSerializable
     public function __construct()
     {
         $this->setCleared(static::CLEARED_TRUE);
+        $this->addDirty('entityType');
 
         $this->setEntityId(strtoupper(\UUID::generate(\UUID::UUID_TIME, \UUID::FMT_STRING, "ABCDEF")));
     }
