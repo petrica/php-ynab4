@@ -260,6 +260,9 @@ class YnabTransaction implements \JsonSerializable
         $data['entityVersion'] = $utils->packKnowledge([
             $this->getEntityVersion()
         ]);
+        if (isset($this->dirty['date'])) {
+            $data['date'] = $this->getDate()->format('Y-m-d');
+        }
         return array_intersect_key($data, array_flip($this->dirty));
     }
 }
