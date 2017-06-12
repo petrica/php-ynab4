@@ -255,14 +255,19 @@ class YnabTransaction implements \JsonSerializable
      */
     function jsonSerialize()
     {
+        $dirty = array_flip($this->dirty);
         $utils = new YnabVersionUtils();
         $data = get_object_vars($this);
         $data['entityVersion'] = $utils->packKnowledge([
             $this->getEntityVersion()
         ]);
-        if (isset($this->dirty['date'])) {
-            $data['date'] = $this->getDate()->format('Y-m-d');
+        if (isset($dirty['date'])) {
+            $date = $this->getDate();
+            if (!$date instanceof \DateTime) {
+                $date = new \DateTime($this->getDate());
+            }
+            $data['date'] = $date->format('Y-m-d');
         }
-        return array_intersect_key($data, array_flip($this->dirty));
+        return array_intersect_key($data, $dirty);
     }
 }
