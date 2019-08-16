@@ -1,0 +1,13 @@
+{
+    "YNABVersion": "Desktop version: YNAB 4 v4.3.855 (com.ynab.YNAB4.LiveCaptive), AIR Version: 4.0.0.1390",
+    "deviceGUID": "ACD9E8B4-8F14-601D-3F15-9A4E22298986",
+    "deviceType": "Desktop (AIR), OS:Mac OS 10.14.5",
+    "formatVersion": "1.2",
+    "friendlyName": "apples-Mac-mini",
+    "hasFullKnowledge": true,
+    "highestDataVersionImported": null,
+    "knowledge": "A-67",
+    "knowledgeInFullBudgetFile": "A-67",
+    "lastDataVersionFullyKnown": "4.2",
+    "shortDeviceId": "A"
+}

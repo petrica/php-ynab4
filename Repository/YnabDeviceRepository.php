@@ -113,7 +113,7 @@ class YnabDeviceRepository implements YnabRepositoryInterface
         $names = [];
         foreach ($files as $file) {
             $info = pathinfo($file);
-            if (count($info['filename']) == 1) {
+            if (isset($info['filename'])) {
                 $names[] = $file;
             }
         }

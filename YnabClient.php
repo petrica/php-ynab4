@@ -208,6 +208,15 @@ class YnabClient
 
         $this->getDevice()->setKnowledge($knowledge);
 
+        // Mark other devices as not having full knowledge
+        if (count($items)) {
+            foreach ($this->devices as $device) {
+                if ($device->getDeviceGUID() != $this->getDevice()->getDeviceGUID()) {
+                    $device->setHasFullKnowledge(false);
+                }
+            }
+        }
+
         $repo = new YnabDiffRepository($this->devices, $this->getDevice()->getKnowledge(), $this->io);
         return $repo->write($diff);
     }
@@ -217,14 +226,19 @@ class YnabClient
      */
     public function commit()
     {
-        $device = $this->getDevice();
-
         $repo = new YnabDeviceRepository($this->budget, $this->io);
-        return $repo->write($device);
+        $success = true;
+        foreach ($this->devices as $device) {
+            if (!$repo->write($device)) {
+                $success = false;
+            }
+        }
+
+        return $success;
     }
 
     /**
-     * Read full knowledge database and
+     * Read full knowledge from a device
      */
     public function sync()
     {

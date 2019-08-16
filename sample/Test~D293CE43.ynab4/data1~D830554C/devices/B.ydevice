@@ -1,0 +1,13 @@
+{
+    "YNABVersion": "MTools",
+    "deviceGUID": "1A66CDAA-C029-11E9-A465-414243444546",
+    "deviceType": "Web",
+    "formatVersion": "1.2",
+    "friendlyName": "MTools",
+    "hasFullKnowledge": false,
+    "highestDataVersionImported": "4.2",
+    "knowledge": "B-0",
+    "knowledgeInFullBudgetFile": null,
+    "lastDataVersionFullyKnown": "4.2",
+    "shortDeviceId": "B"
+}

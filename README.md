@@ -2,6 +2,32 @@
 
 Read and write transactions from and to a YNAB4 JSON database.
 
+## Prerequisites
+* PHP 5.4+
+* composer
+
+## Quick start
+
+Clone repository to disk
+
+```
+git clone git@github.com:petrica/php-ynab4.git
+```
+
+Run composer install in order to create necessary libraries
+
+```
+cd php-ynab4
+composer install
+```
+
+Play with the sample application
+
+```
+cd sample
+php index.php
+```
+
 ## Read transactions
 
 ```php

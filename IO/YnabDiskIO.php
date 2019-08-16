@@ -28,6 +28,9 @@ class YnabDiskIO implements YnabIOInterface
      */
     public function write($ynabFile)
     {
+        if(!is_dir(dirname($ynabFile->getPath()))) {
+            mkdir(dirname($ynabFile->getPath()));
+        }
         return file_put_contents($ynabFile->getPath(), $ynabFile->__toString());
     }
 
@@ -36,7 +39,10 @@ class YnabDiskIO implements YnabIOInterface
      */
     public function ls($path)
     {
-        $files = scandir($path);
+        $files = [];
+        if (is_dir($path)) {
+            $files = scandir($path);
+        }
         $full = [];
         if ($files) {
             $files = array_filter($files, function ($file) {
